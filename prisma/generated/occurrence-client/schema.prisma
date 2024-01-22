@@ -1,0 +1,44 @@
+generator occurrenceClient {
+  provider = "prisma-client-js"
+  output   = "./generated/occurrence-client"
+}
+
+datasource db {
+  provider     = "postgresql"
+  url          = env("OCCURRENCE_DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model Occurrence {
+  ocoId       String   @id @map("OcoId")
+  se          String   @map("SE")
+  al          String   @map("AL")
+  eqp         String   @map("EQP")
+  dtHrAlt     DateTime @map("DtHrAlt")
+  dtHrOco     DateTime @map("DtHrOco")
+  dtHrIni     DateTime @map("DtHrIni")
+  dtHrFim     DateTime @map("DtHrFim")
+  nRelig      Int      @map("NRelig")
+  duracao     Float    @map("Duracao")
+  tipoOco     String   @map("TipoOco")
+  protSen     String   @map("ProtSen")
+  protAtu     String   @map("ProtAtu")
+  faltas      String   @map("Faltas")
+  condPre     String   @map("CondPre")
+  condPos     String   @map("CondPos")
+  emailSended String   @map("EmailSended")
+  smsSended   String   @map("SMSSended")
+  idCausa     Int      @map("IdCausa")
+  modifyBy    String   @map("ModifyBy")
+  causa       String   @map("Causa")
+  obs         String   @map("Obs")
+  idEleRede   Int      @map("IdEleRede")
+  dados_CC    String   @map("Dados_CC")
+  dados_COD   String   @map("Dados_COD")
+  refLocFalt  String   @map("RefLocFalt")
+  contabData  DateTime @map("ContabData")
+  contaBy     String   @map("ContaBy")
+  modifBy     String   @map("ModifBy")
+
+  @@map("Ocorrencia")
+}
