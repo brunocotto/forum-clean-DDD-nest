@@ -1,4 +1,5 @@
 @baseURL = http://localhost:3333
+@authToken = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4NTQzYWQ1Yi1kMTg4LTQ3MGQtYWViMy02N2VlOTdkMThkYzYiLCJpYXQiOjE3MDYxMDYzMzh9.hs5WdImmGFTtJ88bNMNQVP8DLItdevZoL9FpeOAYiAe_Q4nGdNixCIGkFI2QoFFnYS7mt66twOBfWPUS4ZfhsUBSTXudbz0Z-wyAYtprQ4s3LaW0HQznHnPg8GpHkLimd9q-UbmXYXE8VH7i3y_BuJJGtdibKITGI68p_cdlzZDsoDUHaAPU0TVKiM9oUcqKMtGzNphfyVo4QH9xRW5NiQgkOfs37UajLOpnG8K7HnfT4IQu--I4BX1gVx05mEfDBZJUerplRpyljP9Vu7MqxiWGI7-ExPqbl6FIwdiak-pLRUs41klsJVxQkQF1P0h-IhmbyUR6z3UZnE1whlBOzw
 
 # @name create_account
 POST {{baseURL}}/accounts
@@ -6,8 +7,8 @@ Content-Type: application/json
 
 {
 	"name": "Bruno Otto",
-	"email": "bruno5@sulenge.com.br",
-	"password": "12345",
+	"email": "bruno@gmail.com",
+	"password": "12345"
 }
 
 ###
@@ -17,6 +18,13 @@ POST {{baseURL}}/sessions
 Content-Type: application/json
 
 {
-	"email": "bruno5@sulenge.com.br",
+	"email": "bruno@gmail.com",
 	"password": "12345"
 }
+
+###
+
+# @name create_question
+POST {{baseURL}}/questions
+Content-Type: application/json
+Authorization: Bearer {{authToken}}

@@ -15,8 +15,6 @@ const createAccountBodySchema = z.object({
   name: z.string(),
   email: z.string().email(),
   password: z.string(),
-  phone: z.string(),
-  company: z.string(),
 })
 
 type CreateAccountBodySchema = z.infer<typeof createAccountBodySchema>
