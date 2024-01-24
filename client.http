@@ -8,8 +8,6 @@ Content-Type: application/json
 	"name": "Bruno Otto",
 	"email": "bruno5@sulenge.com.br",
 	"password": "12345",
-	"phone": "5197561562",
-	"company": "sulenge"
 }
 
 ###

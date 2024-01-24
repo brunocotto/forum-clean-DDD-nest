@@ -12,13 +12,7 @@
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
-    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-    "generate:occurrence": "npx prisma generate --schema=./prisma/occurrence-db.prisma",
-    "generate:user": "npx prisma generate --schema=./prisma/user-db.prisma",
-    "studio:occurrence": "npx prisma studio --schema=./prisma/occurrence-db.prisma",
-    "studio:user": "npx prisma studio --schema=./prisma/user-db.prisma",
-    "migrate:occurrence": "npx prisma migrate dev --schema=./prisma/occurrence-db.prisma",
-    "migrate:user": "npx prisma migrate dev --schema=./prisma/user-db.prisma"
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
