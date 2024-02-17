@@ -1,5 +1,5 @@
 @baseURL = http://localhost:3333
-@authToken = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlMmEwMDc0Zi0yOWJkLTQ1OTctOTViYS0zNWY2MmUzMWJiNDgiLCJpYXQiOjE3MDYxNDAyNzF9.KhexTjA6Y-1HMu2RGi3-V5tCdwHgTaIaRJSOkXMFBX71MYyMm3vOXIiYxSg5OeuNuO88ygUFPEvMtAmtWAixDvFHvWt-GxbeQD_SY17udDbc6i09hKYD2Ah1q_EbifUFwrnDldE-_jYUqLUfvNdZKd_UVFLLUv7Ybc6X5mfLGRgw2BxP2nR0nuCgichVAw3ggqCoP0m-if7fKpedfzs2bAqD5IkeUfAGqBv7TV5tUyHjrprpSQ1zDl4Gd2qubNmu-b5CecOY6mAXJnS77fK7FLsVxx6Y5AAycbjpWm0TNWGcoU4tfziuty7qjni6_NrV12AEufuKJKkf0K7q8hfuvg
+@authToken = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3OGU2NGU5Zi1kMGY5LTRkZjctOTgxNi00N2M0MTg3ZjYyNzgiLCJpYXQiOjE3MDgxNzA3OTV9.hEXn5SD-REejdt50FGVeLtEtubYoqM4tWXWcf3QwKLhxSbE5yyQyhl-UUHJsB_hV9CotFJwl9Ra3oEc1Kh5nGpTTfZWov3yWrovhcidWhtAZQOSpqg4eGHskITsKpFs8uYonQqyHy1b5vCwepUxLmIf90OoAWCuS0VAIYUEs6uQA6wezTHAg3WRescsbTgoDHDoQEJtcA0uOevZl-UDpvcbgX_1g7tcc1R6cZYiDkchV41XjX6gOBuO9Fx9Wi_yrZJoGyEJOSdwvLK1QqDYeguG6kRtGUI6l4vDEC_J-2gKyYR_rpjhx0pqKTrL8CAZXOkdMyG3Z7vRPZOvraBMyGQ
 
 # @name create_account
 POST {{baseURL}}/accounts
@@ -7,7 +7,7 @@ Content-Type: application/json
 
 {
 	"name": "Bruno Otto",
-	"email": "bruno333@gmail.com",
+	"email": "bruno@gmail.com",
 	"password": "12345"
 }
 
@@ -30,8 +30,8 @@ Content-Type: application/json
 Authorization: Bearer {{authToken}}
 
 {
-	"title": "Nova pergunta 2",
-	"content": "Conteúdo da pergunta"
+	"title": "Nova pergunta aaa",
+	"content": "Conteúdo da pergunta aaa"
 }
 
 ###
