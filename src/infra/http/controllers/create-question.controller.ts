@@ -29,7 +29,7 @@ export class CreateQuestionController {
       title,
       content,
       authorId: userId,
-      attachmentIds: [],
+      attachmentsIds: [],
     })
 
     if (result.isLeft()) {
