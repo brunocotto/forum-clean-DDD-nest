@@ -28,6 +28,7 @@ import { EnvService } from '../env/env.service'
   ],
   providers: [
     JwtStrategy,
+    EnvService,
     {
       provide: APP_GUARD,
       useClass: JwtAuthGuard,
