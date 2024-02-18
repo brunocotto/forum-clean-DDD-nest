@@ -10,36 +10,34 @@ import { CurrentUser } from '@/infra/auth/current-user-decorator'
 import { UserPayload } from '@/infra/auth/jwt.strategy'
 import { ZodValidationPipe } from '@/infra/http/pipes/zod-validation.pipe'
 import { z } from 'zod'
-import { EditQuestionUseCase } from '@/domain/forum/application/use-cases/edit-question'
+import { EditAnswerUseCase } from '@/domain/forum/application/use-cases/edit-answer'
 
-const editQuestionBodySchema = z.object({
-  title: z.string(),
+const editAnswerBodySchema = z.object({
   content: z.string(),
 })
 
-type EditQuestionBodySchema = z.infer<typeof editQuestionBodySchema>
+type EditAnswerBodySchema = z.infer<typeof editAnswerBodySchema>
 
-@Controller('/questions/:id')
-export class EditQuestionController {
-  constructor(private editQuestion: EditQuestionUseCase) {}
+@Controller('/answers/:id')
+export class EditAnswerController {
+  constructor(private editAnswer: EditAnswerUseCase) {}
 
   @Put()
   @HttpCode(204)
   async handle(
-    @Body(new ZodValidationPipe(editQuestionBodySchema))
-    body: EditQuestionBodySchema,
+    @Body(new ZodValidationPipe(editAnswerBodySchema))
+    body: EditAnswerBodySchema,
     @CurrentUser() user: UserPayload,
-    @Param('id') questionId: string,
+    @Param('id') answerId: string,
   ) {
-    const { title, content } = body
+    const { content } = body
     const { sub: userId } = user
 
-    const result = await this.editQuestion.execute({
-      title,
+    const result = await this.editAnswer.execute({
       content,
       authorId: userId,
+      answerId,
       attachmentsIds: [],
-      questionId,
     })
 
     if (result.isLeft()) {
