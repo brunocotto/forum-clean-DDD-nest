@@ -1,6 +1,4 @@
 import { InMemoryAttachmentsRepository } from './../../../../../test/repositories/in-memory-attachments-repository'
-import { FakeHasher } from 'test/cryptography/fake-hasher'
-import { InMemoryStudentsRepository } from 'test/repositories/in-memory-students-repository'
 import { UploadAndCreateAttachmentUseCase } from './upload-and-create-attachment'
 import { FakeUploader } from 'test/storage/fake-uploader'
 import { InvalidAttachmentType } from './errors/invalid-attachment-type-error'
