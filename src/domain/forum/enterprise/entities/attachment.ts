@@ -1,12 +1,12 @@
 import { Entity } from '@/core/entities/entity'
 import { UniqueEntityId } from '@/core/entities/unique-entity-id'
 
-interface AttachementProps {
+export interface AttachmentProps {
   title: string
   url: string
 }
 
-export class Attachment extends Entity<AttachementProps> {
+export class Attachment extends Entity<AttachmentProps> {
   get title() {
     return this.props.title
   }
@@ -15,7 +15,7 @@ export class Attachment extends Entity<AttachementProps> {
     return this.props.url
   }
 
-  static create(props: AttachementProps, id?: UniqueEntityId) {
+  static create(props: AttachmentProps, id?: UniqueEntityId) {
     const attachement = new Attachment(props, id)
 
     return attachement
